@@ -26,12 +26,12 @@ Once the contract is live, you can use these features to manage your DGN tokens 
 # Degen Token Store
 # Here's what you can snag with your hard-earned DGN tokens:
 
-Dog (500 DGN)
+1. Dog (500 DGN)
 
-Wolf (700 DGN)
+2. Wolf (700 DGN)
 
-Kingkong (1200 DGN)
+3. Kingkong (1200 DGN)
 
-Dragon (1800 DGN)
+4. Dragon (1800 DGN)
 
-9 Tailed Beast (2000 DGN)
+5. 9 Tailed Beast (2000 DGN)
