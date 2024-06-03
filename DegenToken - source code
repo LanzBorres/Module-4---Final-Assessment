@@ -13,7 +13,7 @@ contract DegenToken is ERC20, Ownable, ERC20Burnable {
         items[2] = Item("Wolf", 700);
         items[3] = Item("Kingkong", 1200);
         items[4] = Item("Dragon", 1800);
-        items[5] = Item("9 Tails Beast", 2000);
+        items[5] = Item("Nine Tails Beast", 2000);
     }
 
     struct Item {
@@ -22,6 +22,8 @@ contract DegenToken is ERC20, Ownable, ERC20Burnable {
     }
 
     mapping(uint256 => Item) public items;
+
+    mapping(address => uint256[]) public playerItems;
 
     function mint(address owner, address to, uint256 amount) public onlyOwner {
         require(msg.sender == owner, "Only the owner can mint tokens.");
@@ -72,10 +74,23 @@ contract DegenToken is ERC20, Ownable, ERC20Burnable {
 
         _burn(_player, items[itemId].cost);
 
+        playerItems[_player].push(itemId);
+
         console.log("Item redeemed by:", _player);
         console.log("Item name:", itemName);
 
         return itemName;
     }
 
+    function getPlayerItems(address _player) external view returns (ItemInfo[] memory) {
+        uint256[] memory itemIds = playerItems[_player];
+        ItemInfo[] memory ownedItems = new ItemInfo[](itemIds.length);
+
+        for (uint256 i = 0; i < itemIds.length; i++) {
+            uint256 itemId = itemIds[i];
+            ownedItems[i] = ItemInfo(itemId, items[itemId].name, items[itemId].cost);
+        }
+
+        return ownedItems;
+    }
 }
