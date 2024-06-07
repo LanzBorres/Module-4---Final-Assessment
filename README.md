@@ -23,15 +23,4 @@ Once the contract is live, you can use these features to manage your DGN tokens 
 5. Burning Tokens (Optional): If you have DGN tokens you don't need anymore, you can permanently remove them from circulation using the burnTokens function (but be sure this is what you want to do!).
 
 
-# Degen Token Store
-# Here's what you can snag with your hard-earned DGN tokens:
 
-1. Dog (500 DGN)
-
-2. Wolf (700 DGN)
-
-3. Kingkong (1200 DGN)
-
-4. Dragon (1800 DGN)
-
-5. 9 Tailed Beast (2000 DGN)
